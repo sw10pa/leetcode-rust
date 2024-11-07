@@ -1,6 +1,6 @@
 impl Solution {
-    fn can_be_planted_in(index: usize, flowerbed: &Vec<i32>) -> bool {
-        (flowerbed[index - 1] == 0 && flowerbed[index] == 0 && flowerbed[index + 1] == 0)
+    fn can_be_planted_in(index: usize, flowerbed: &[i32]) -> bool {
+        flowerbed[index - 1] == 0 && flowerbed[index] == 0 && flowerbed[index + 1] == 0
     }
 
     pub fn can_place_flowers(flowerbed: Vec<i32>, n: i32) -> bool {
@@ -20,6 +20,6 @@ impl Solution {
             }
         }
 
-        (n == 0)
+        n == 0
     }
 }
