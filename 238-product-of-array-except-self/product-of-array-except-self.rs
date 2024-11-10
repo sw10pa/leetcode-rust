@@ -10,9 +10,10 @@ impl Solution {
         }
 
         let mut suffix = 1;
-        for i in (0..n).rev() {
-            result[i] *= suffix;
-            suffix *= nums[i];
+        for i in 0..n {
+            let index = n - 1 - i;
+            result[index] *= suffix;
+            suffix *= nums[index];
         }
 
         result
