@@ -4,13 +4,10 @@ impl Solution {
             return false;
         }
 
-        let mut n = n;
-        while n != 1 {
-            if n % 2 == 1 {
-                return false;
-            }
-            n /= 2;
+        if n == 1 {
+            return true;
         }
-        true
+
+        n % 2 == 0 && Self::is_power_of_two(n / 2)
     }
 }
