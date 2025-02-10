@@ -15,9 +15,7 @@ impl Solution {
             match guess(middle) {
                 -1 => right = middle - 1,
                 1 => left = middle + 1,
-                _ => {
-                    return middle;
-                },
+                _ => return middle,
             }
         }
     }
